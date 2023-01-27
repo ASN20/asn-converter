@@ -22,11 +22,13 @@ export default function MmCmConverter() {
             </Head>
             <div className="container w-4/5 flex flex-col md:ml-auto mx-auto mt-8 md:mt-0">
                 <div id="first-half">
-                    <Input type="number" value={text1} onChange={handleOnChange1} title="Convert Millimetre to Centimetre" title2="Type a millimetre value" result={`${Number(text1) / 10}cm`} />
+                    <Input value={text1} onChange={handleOnChange1} title="Convert Millimetre to Centimetre" title2="Type a millimetre value" unit="cm" result={Number(text1) / 10} />
+                    {text1 !== "" ? <button onClick={() => setText1("")} className="font-bold transition-all mt-5 inline-flex text-slate-800 bg-sky-400 border-0 py-2 px-6 focus:outline-none md:hover:bg-sky-200 rounded text-sm">Clear</button> : ""}
                 </div>
                 <hr className="border-2 my-4 border-sky-600 w-full" />
                 <div id="second-half">
-                    <Input type="number" value={text2} onChange={handleOnChange2} title="Convert Centimetre to Millimetre" title2="Type a centimetre value" result={`${Number(text2) * 10}mm`} />
+                    <Input value={text2} onChange={handleOnChange2} title="Convert Centimetre to Millimetre" title2="Type a centimetre value" unit="mm" result={Number(text2) * 10} />
+                    {text2 !== "" ? <button onClick={() => setText2("")} className="font-bold transition-all mt-5 inline-flex text-slate-800 bg-sky-400 border-0 py-2 px-6 focus:outline-none md:hover:bg-sky-200 rounded text-sm">Clear</button> : ""}
                 </div>
             </div>
         </>
