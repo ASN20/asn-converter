@@ -6,7 +6,7 @@ export default function Navbar() {
     let loc = useRouter();
 
     return (
-        <header className="bg-slate-800 text-gray-400 body-font shadow-sky-400 shadow-2xl fixed w-full">
+        <header className="bg-slate-800 text-gray-400 body-font shadow-sky-400 shadow-2xl fixed w-full z-50">
             <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
                 <Link href="/" className="flex title-font font-medium items-center text-sky-400 md:hover:text-sky-200 transition-all mb-4 md:mb-0">
                     <span className='w-8 h-10 text-slate-800 p-2 bg-sky-400 md:hover:bg-sky-200 transition-colors rounded'>
